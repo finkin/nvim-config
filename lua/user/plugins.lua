@@ -54,6 +54,8 @@ return packer.startup(function(use)
     use "nvim-lualine/lualine.nvim"
 
     use { "dracula/vim", as = "dracula"  } 
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "shaunsingh/nord.nvim", as = "nord" }
 
     use "hrsh7th/nvim-cmp"                      -- Completion plugin
     use "hrsh7th/cmp-buffer"                    -- buffer completion
