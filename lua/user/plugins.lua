@@ -52,6 +52,7 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
     use "nvim-lualine/lualine.nvim"
+    use "tpope/vim-surround"
 
     use { "dracula/vim", as = "dracula"  } 
     use { "catppuccin/nvim", as = "catppuccin" }
