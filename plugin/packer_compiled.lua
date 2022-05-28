@@ -144,11 +144,6 @@ _G.packer_plugins = {
     path = "/Users/javieralonso/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  nord = {
-    loaded = true,
-    path = "/Users/javieralonso/.local/share/nvim/site/pack/packer/start/nord",
-    url = "https://github.com/shaunsingh/nord.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/javieralonso/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
