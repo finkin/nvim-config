@@ -89,8 +89,6 @@ return packer.startup(function(use)
     -- Git
     use "lewis6991/gitsigns.nvim"
 
-    use "akinsho/toggleterm.nvim"
-
     use "folke/which-key.nvim"
     -- use "dstein64/vim-startuptime"
     -- Automatically set up your configuration after cloning packer .nvim
