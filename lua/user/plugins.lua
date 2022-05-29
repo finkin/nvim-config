@@ -49,14 +49,16 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim"                 -- Easyliy comment stuff
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
-    use "akinsho/bufferline.nvim"
-    use "moll/vim-bbye"
+    use "akinsho/bufferline.nvim"               -- Buffers as tabs
+    use "moll/vim-bbye"                         -- Close buffers elegantly
     use "nvim-lualine/lualine.nvim"
     use "tpope/vim-surround"
 
+    -- Themes
     use { "dracula/vim", as = "dracula"  } 
     use { "catppuccin/nvim", as = "catppuccin" }
 
+    -- Completion
     use "hrsh7th/nvim-cmp"                      -- Completion plugin
     use "hrsh7th/cmp-buffer"                    -- buffer completion
     use "hrsh7th/cmp-path"                      -- path completion
@@ -68,6 +70,7 @@ return packer.startup(function(use)
     use "L3MON4D3/LuaSnip"                      -- snippet engine
     use "rafamadriz/friendly-snippets"          -- a bunch of snippets
 
+    -- LSP
     use "neovim/nvim-lspconfig"                 -- enable LSP
     use "williamboman/nvim-lsp-installer"       -- simple to use language server installer
     use "jose-elias-alvarez/null-ls.nvim"       -- for formatters and linters
@@ -76,6 +79,7 @@ return packer.startup(function(use)
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use 'nvim-telescope/telescope-media-files.nvim'
+    use 'nvim-telescope/telescope-project.nvim'
 
     -- Treesitter
     use {

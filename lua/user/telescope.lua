@@ -4,15 +4,39 @@ if not status_ok then
 end
 
 telescope.load_extension('media_files')
+telescope.load_extension('project')
 
 local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
-    prompt_prefix = " ",
-    selection_caret = " ",
+    vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+    },
+    prompt_prefix = "   ",
+    selection_caret = "  ",
     path_display = { "smart" },
+    layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        prompt_position = "top",
+        preview_width = 0.55,
+        results_width = 0.8,
+      },
+      vertical = {
+        mirror = false,
+      },
+      width = 0.87,
+      height = 0.80,
+      preview_cutoff = 120,
+    },
+    border = true,
 
     mappings = {
       i = {
