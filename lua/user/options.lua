@@ -36,4 +36,10 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
+vim.cmd([[
+  augroup FileTypeInit
+    au!
+    au BufNew,VimEnter *\.tf setlocal ft=tf
+  augroup END
+]])
 
