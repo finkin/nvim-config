@@ -78,6 +78,9 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
     use "arkav/lualine-lsp-progress"
 
+    -- DAP
+    use "mfussenegger/nvim-dap"
+
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use 'nvim-telescope/telescope-media-files.nvim'
