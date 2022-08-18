@@ -57,6 +57,7 @@ return packer.startup(function(use)
     -- Themes
     use { "dracula/vim", as = "dracula" }
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "folke/tokyonight.nvim", as = "tokio" }
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin

@@ -229,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/javier.alonso/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  tokio = {
+    loaded = true,
+    path = "/Users/javier.alonso/.local/share/nvim/site/pack/packer/start/tokio",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/Users/javier.alonso/.local/share/nvim/site/pack/packer/start/vim-bbye",
