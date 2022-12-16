@@ -35,6 +35,6 @@ local function on_attach()
   -- setup buffer keymaps
 end
 
-for _, server in ipairs { "gopls", "html", "marksman", "omnisharp", "tflint", "yamlls", "bashls"  } do
+for _, server in ipairs { "gopls", "html", "marksman", "omnisharp", "tflint", "yamlls", "bashls", "dockerls"  } do
   lspconfig[server].setup { on_attach = on_attach }
 end
