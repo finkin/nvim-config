@@ -10,12 +10,18 @@ null_ls.setup({
     b.code_actions.gitsigns,
     b.code_actions.gitrebase,
 
-    b.formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+    b.formatting.packer,
+    b.formatting.prettier,
     b.formatting.black.with({ extra_args = { "--fast" } }),
     b.formatting.stylua,
 
+    b.diagnostics.actionlint,
+    b.diagnostics.cfn_lint,
     b.diagnostics.eslint,
     b.diagnostics.flake8,
-    b.diagnostics.cfn_lint,
+    b.diagnostics.gitlint,
+    b.diagnostics.hadolint,
+    b.diagnostics.write_good,
+    b.hover.dictionary,
   },
 })
