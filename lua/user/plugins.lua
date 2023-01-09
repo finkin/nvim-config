@@ -47,8 +47,11 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs" -- Autopair, integrates with cmp ans treesitter
     use "numToStr/Comment.nvim" -- Easyliy comment stuff
-    use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
+    use { 'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons',
+      },
+    }
     use "akinsho/bufferline.nvim" -- Buffers as tabs
     use "moll/vim-bbye" -- Close buffers elegantly
     use "nvim-lualine/lualine.nvim"
@@ -57,7 +60,7 @@ return packer.startup(function(use)
     -- Themes
     use { "dracula/vim", as = "dracula" }
     use { "catppuccin/nvim", as = "catppuccin" }
-    use { "folke/tokyonight.nvim", as = "tokio" }
+    use "folke/tokyonight.nvim"
 
     -- Completion
     use "hrsh7th/nvim-cmp" -- Completion plugin
