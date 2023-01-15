@@ -1,45 +1,46 @@
 -- :help options
 
 local options = {
-    backup = false,                     -- creates a backup file
-    number = true,                      -- set numbered lines
-    relativenumber = true,              -- set relative numbered lines
-    numberwidth = 4,                    -- set number column width to 2 (default 4)
-    incsearch = true,                   -- highlight the matched text pattern when searching
-    hlsearch = true,                    -- higlight all matches on previous search 
-    shiftwidth = 2,
-    tabstop = 2,                        -- insert 4 spaces for tab
-    softtabstop = 2,
-    expandtab = true,                   -- converts tabs to spaces
-    scrolloff=999,                      -- start scrolling xx lines from top or bottom
-    smartindent = true,                 -- smart indenting
-    splitbelow = true,                  -- force all horizontal splits to go below current window 
-    splitright = true,                  -- force all vertical splits to go to the right of current window
-    termguicolors = true,
-    -- vim.opt.syntax on,
-    hidden = true,                      -- navigate buffers without losing unsaved work
-    undofile = true,                    -- enable persistent undo
-    mouse = "a",                        -- allow the mouse to be used in neovim
-    ignorecase = true,                  -- ignore case in search patterns
-    smartcase = true,                   -- smart case
-    showmode = false,                   -- hide mode as lightline is already showing it
-    --vim.opt.gitsigns = true,
-    clipboard = "unnamedplus",          -- allowws neovim to access the system clipboard
-    signcolumn = "number",
-    cmdheight = 0,                      -- hide command line when it is not used 
-    showtabline = 4,                    -- always show tabs
-    cursorline = true,                  -- highlight the current line
-    wrap = false,                       -- don't wrap long lines
+  -- line numbers
+  relativenumber = true,              -- show relative line number
+  number = true,                      -- show absolute line number on cursor line
+  numberwidth = 4,                    -- set number column width to 2 (default 4)
+  -- tabs & indentation
+  expandtab = true,                   -- converts tabs to spaces (\x09 => \x20)
+  tabstop = 2,                        -- how long a line starting with a tab will appear to be
+  softtabstop = 2,                    -- how many spaces when pressing tab or backspace
+  shiftwidth = 2,                     -- how long an indentation will go
+  smartindent = true,                 -- smart indenting
+  -- search
+  incsearch = true,                   -- highlight the matched text pattern when searching
+  hlsearch = true,                    -- higlight all matches on previous search 
+  ignorecase = true,                  -- ignore case in search patterns
+  smartcase = true,                   -- assumes case-sensitive only if you type mixed case in search
+  -- undo
+  backup = false,                     -- creates a backup file
+  undofile = true,                    -- enable persistent undo
+  -- scrolling
+  scrolloff = 999,                    -- start scrolling xx lines from top or bottom
+  splitbelow = true,                  -- force all horizontal splits to go below current window 
+  splitright = true,                  -- force all vertical splits to go to the right of current window
+  -- colors
+  termguicolors = true,
+  cursorline = true,                  -- highlight the current line
+  -- cursorcolumn = 80,                  -- show vertical line at 80 column
+  signcolumn = "yes",              -- show line numbers and signs at the same time
+
+  -- vim.opt.syntax on,
+  hidden = true,                      -- navigate buffers without losing unsaved work
+  mouse = "a",                        -- allow the mouse to be used in neovim
+  showmode = false,                   -- hide mode as lightline is already showing it
+  --vim.opt.gitsigns = true,
+  clipboard = "unnamedplus",          -- allowws neovim to access the system clipboard
+  cmdheight = 0,                      -- hide command line when it is not used 
+  showtabline = 4,                    -- always show tabs
+  wrap = false,                       -- don't wrap long lines
 }
 
 for k, v in pairs(options) do
-    vim.opt[k] = v
+  vim.opt[k] = v
 end
-
-vim.cmd([[
-  augroup FileTypeInit
-    au!
-    au BufNew,VimEnter *\.tf setlocal ft=tf
-  augroup END
-]])
 
