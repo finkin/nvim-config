@@ -7,7 +7,15 @@ local b = null_ls.builtins
 
 null_ls.setup({
   sources = {
-    b.code_actions.gitsigns,
+    --[[ b.code_actions.gitsigns.with( ]]
+    --[[   { ]]
+    --[[     config = { ]]
+    --[[       filter_actions = function (title) ]]
+    --[[         return title:lower():match("blame") == nil --filter out blame actions ]]
+    --[[       end ]]
+    --[[     }, ]]
+    --[[   } ]]
+    --[[ ), ]]
     b.code_actions.gitrebase,
 
     b.formatting.packer,
