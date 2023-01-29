@@ -1,9 +1,7 @@
-local ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not ok then
-  return
-end
+require("mason").setup()
+require("mason-lspconfig").setup()
 
-lsp_installer.setup {}
+
 local lspconfig = require("lspconfig")
 
 local opts = {
@@ -35,6 +33,12 @@ local function on_attach()
   -- setup buffer keymaps
 end
 
-for _, server in ipairs { "gopls", "html", "marksman", "omnisharp", "tflint", "yamlls", "bashls", "dockerls"  } do
+for _, server in ipairs { "gopls", "html", "marksman", "omnisharp", "tflint", "bashls", "dockerls"  } do
   lspconfig[server].setup { on_attach = on_attach }
 end
+
+
+require("user.lsp.handlers").setup()
+require("user.lsp.null-ls")
+require("user.lsp.lspsaga")
+require'lspconfig'.bashls.setup{}

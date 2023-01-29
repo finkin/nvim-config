@@ -41,13 +41,15 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-nvim-lsp-signature-help",
 
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+
 	"L3MON4D3/LuaSnip", -- snippet engine
 	"saadparwaiz1/cmp_luasnip",
 	"rafamadriz/friendly-snippets", -- a bunch of snippets
 
 	-- LSP
 	"neovim/nvim-lspconfig", -- enable LSP
-	"williamboman/nvim-lsp-installer", -- simple to use language server installer
 	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"arkav/lualine-lsp-progress",
 	"glepnir/lspsaga.nvim",
