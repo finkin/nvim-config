@@ -41,8 +41,8 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-nvim-lsp-signature-help",
 
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 
 	"L3MON4D3/LuaSnip", -- snippet engine
 	"saadparwaiz1/cmp_luasnip",
@@ -55,6 +55,11 @@ require("lazy").setup({
 	"glepnir/lspsaga.nvim",
 	-- DAP
 	"mfussenegger/nvim-dap",
+
+	-- Command line
+	{ "folke/noice.nvim", dependencies = {
+		"MunifTanjim/nui.nvim",
+	} },
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
