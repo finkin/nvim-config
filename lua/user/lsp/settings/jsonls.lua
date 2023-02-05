@@ -9,31 +9,12 @@ local schemas = {
     url = "https://json.schemastore.org/tsconfig.json",
   },
   {
-    description = "Lerna config",
-    fileMatch = { "lerna.json" },
-    url = "https://json.schemastore.org/lerna.json",
-  },
-  {
-    description = "Babel configuration",
-    fileMatch = {
-      ".babelrc.json",
-      ".babelrc",
-      "babel.config.json",
-    },
-    url = "https://json.schemastore.org/babelrc.json",
-  },
-  {
     description = "ESLint config",
     fileMatch = {
       ".eslintrc.json",
       ".eslintrc",
     },
     url = "https://json.schemastore.org/eslintrc.json",
-  },
-  {
-    description = "Bucklescript config",
-    fileMatch = { "bsconfig.json" },
-    url = "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/8.2.0/docs/docson/build-schema.json",
   },
   {
     description = "Prettier config",
@@ -43,11 +24,6 @@ local schemas = {
       "prettier.config.json",
     },
     url = "https://json.schemastore.org/prettierrc",
-  },
-  {
-    description = "Vercel Now config",
-    fileMatch = { "now.json" },
-    url = "https://json.schemastore.org/now",
   },
   {
     description = "Stylelint config",
