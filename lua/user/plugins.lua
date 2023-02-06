@@ -53,6 +53,8 @@ require("lazy").setup({
 	"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
 	"arkav/lualine-lsp-progress",
 	"glepnir/lspsaga.nvim",
+	"folke/trouble.nvim",
+
 	-- DAP
 	"mfussenegger/nvim-dap",
 
