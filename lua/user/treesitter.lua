@@ -1,5 +1,6 @@
 local configs = require("nvim-treesitter.configs")
 configs.setup {
+  ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "go" },
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
   auto_install = true,
