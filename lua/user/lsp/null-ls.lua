@@ -22,6 +22,7 @@ null_ls.setup({
     b.formatting.prettier,
     b.formatting.black.with({ extra_args = { "--fast" } }),
     b.formatting.stylua,
+    b.formatting.terraform_fmt,
 
     b.diagnostics.actionlint,
     b.diagnostics.cfn_lint,
