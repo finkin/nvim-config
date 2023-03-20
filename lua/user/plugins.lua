@@ -85,4 +85,9 @@ require("lazy").setup({
 
 	"ellisonleao/glow.nvim",
 	-- use "dstein64/vim-startuptime"
+  -- Pets
+  {
+    "giusgad/pets.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
+  }
 })
