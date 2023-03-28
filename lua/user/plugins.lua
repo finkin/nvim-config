@@ -83,7 +83,7 @@ require("lazy").setup({
 
 	"folke/which-key.nvim",
 
-	"ellisonleao/glow.nvim",
+	{"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 	-- use "dstein64/vim-startuptime"
   -- Pets
   {
