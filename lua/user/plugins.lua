@@ -18,9 +18,13 @@ require("lazy").setup({
 	"windwp/nvim-autopairs", -- Autopair, integrates with cmp ans treesitter
 	"numToStr/Comment.nvim", -- Easyliy comment stuff
 
-	{ "nvim-tree/nvim-tree.lua", dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	} },
+	{
+		"nvim-tree/nvim-tree.lua",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	},
 
 	"akinsho/bufferline.nvim", -- Buffers as tabs
 	"moll/vim-bbye", -- Close buffers elegantly
@@ -59,15 +63,18 @@ require("lazy").setup({
 	"mfussenegger/nvim-dap",
 
 	-- Command line
-	{ "folke/noice.nvim", dependencies = {
-		"MunifTanjim/nui.nvim",
-	} },
+	{
+		"folke/noice.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+	},
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
 	"nvim-telescope/telescope-media-files.nvim",
 	"nvim-telescope/telescope-project.nvim",
-  "nvim-telescope/telescope-ui-select.nvim",
+	"nvim-telescope/telescope-ui-select.nvim",
 
 	-- Treesitter
 	{
@@ -83,11 +90,11 @@ require("lazy").setup({
 
 	"folke/which-key.nvim",
 
-	{"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 	-- use "dstein64/vim-startuptime"
-  -- Pets
-  {
-    "giusgad/pets.nvim",
-    dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
-  }
+	-- Pets
+	{
+		"giusgad/pets.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
+	},
 })
