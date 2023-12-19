@@ -11,7 +11,6 @@ configs.setup({
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true },
-  context_commentstring = { enable = true },
   rainbow = {
     enable = true,
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags
