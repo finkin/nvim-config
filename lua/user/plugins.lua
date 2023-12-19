@@ -82,7 +82,7 @@ require("lazy").setup({
 		build = ":TSUpdate",
 	},
 	"JoosepAlviste/nvim-ts-context-commentstring",
-	"p00f/nvim-ts-rainbow",
+	"HiPhish/rainbow-delimiters.nvim",
 	"fladson/vim-kitty",
 
 	-- Git
