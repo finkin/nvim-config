@@ -82,7 +82,6 @@ require("lazy").setup({
 		build = ":TSUpdate",
 	},
 	"JoosepAlviste/nvim-ts-context-commentstring",
-	"HiPhish/rainbow-delimiters.nvim",
 	"fladson/vim-kitty",
 
 	-- Git
@@ -90,11 +89,5 @@ require("lazy").setup({
 
 	"folke/which-key.nvim",
 
-	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 	-- use "dstein64/vim-startuptime"
-	-- Pets
-	{
-		"giusgad/pets.nvim",
-		dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
-	},
 })
