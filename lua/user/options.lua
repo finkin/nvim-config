@@ -2,7 +2,7 @@
 
 local options = {
   -- line numbers
-  relativenumber = true,              -- show relative line number
+  -- relativenumber = true,              -- show relative line number
   number = true,                      -- show absolute line number on cursor line
   numberwidth = 4,                    -- set number column width to 2 (default 4)
   -- tabs & indentation
