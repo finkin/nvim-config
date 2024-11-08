@@ -87,7 +87,9 @@ require("lazy").setup({
 	-- Git
 	"lewis6991/gitsigns.nvim",
 
-	"folke/which-key.nvim",
-
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+  }
 	-- use "dstein64/vim-startuptime"
 })
