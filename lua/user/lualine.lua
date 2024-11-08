@@ -20,8 +20,10 @@ local diagnostics = {
 local lsp_server_name = {
   function ()
     local msg = 'No Active Lsp'
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
+    local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
+    --[[ local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype') ]]
+    local clients = vim.lsp.get_clients()
+    --[[ local clients = vim.lsp.get_active_clients() ]]
     if next(clients) == nil then
       return msg
     end
@@ -82,7 +84,7 @@ local lsp_progress = {
 }
 
 local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+	return "spaces: " .. vim.api.nvim_get_option_value("shiftwidth",{})
 end
 
 lualine.setup({
