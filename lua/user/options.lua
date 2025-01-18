@@ -1,10 +1,7 @@
 -- :help options
-
 local options = {
   -- line numbers
-  -- relativenumber = true,              -- show relative line number
   number = true,                      -- show absolute line number on cursor line
-  numberwidth = 4,                    -- set number column width to 2 (default 4)
   -- tabs & indentation
   expandtab = true,                   -- converts tabs to spaces (\x09 => \x20)
   tabstop = 2,                        -- how long a line starting with a tab will appear to be
@@ -25,9 +22,7 @@ local options = {
   splitright = true,                  -- force all vertical splits to go to the right of current window
   -- colors
   termguicolors = true,
-  cursorline = true,                  -- highlight the current line
-  -- cursorcolumn = 80,                  -- show vertical line at 80 column
-  signcolumn = "yes",              -- show line numbers and signs at the same time
+  signcolumn = "yes",                 -- show line numbers and signs at the same time
 
   -- vim.opt.syntax on,
   hidden = true,                      -- navigate buffers without losing unsaved work
@@ -44,3 +39,4 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd [[colorscheme dracula ]]
