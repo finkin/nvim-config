@@ -21,7 +21,7 @@ which_key.add({
   { "<leader>F", "<cmd>lua require('telescope.builtin').live_grep({disable_coordinates = true})<cr>", desc = "Find in files" },
   { "<leader>b", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Buffers" },
   { "<leader>c", "<cmd>Bdelete!<CR>", desc = "Close Buffer" },
-  { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer" },
+  { "<D-s>", "<cmd>Neotree toggle<cr>", desc = "Explorer" },
   { "<leader>f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find files" },
   { "<leader>g", group = "Git" },
   { "<leader>gb", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame" },

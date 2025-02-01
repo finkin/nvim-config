@@ -23,11 +23,14 @@ require("lazy").setup({
   "numToStr/Comment.nvim", -- Easyliy comment stuff
 
   {
-    "nvim-tree/nvim-tree.lua",
-    lazy = false,
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      --[[ {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information ]]
+    }
   },
 
   "akinsho/bufferline.nvim", -- Buffers as tabs

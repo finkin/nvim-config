@@ -60,7 +60,7 @@ lualine.setup({
 	options = {
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "NvimTree", "Outline" },
+		disabled_filetypes = { "neo-tree", "Outline" },
 		globalstatus = true,
 	},
 	sections = {
@@ -70,5 +70,5 @@ lualine.setup({
 		lualine_x = { "searchcount", "filetype", lsp },
 		lualine_y = { "encoding", "fileformat", mixed_spaces, "filesize" },
 		lualine_z = { "%p%%/%L" },
-	},
+	}
 })
