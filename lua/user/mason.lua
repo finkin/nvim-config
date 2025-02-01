@@ -53,5 +53,5 @@ opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
 lspconfig.jsonls.setup(opts)
 
 require("user.lsp.handlers").setup()
-require("user.lsp.null-ls")
+require("user.lsp.none-ls")
 require("user.lsp.lspsaga")

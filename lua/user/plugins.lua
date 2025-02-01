@@ -61,7 +61,10 @@ require("lazy").setup({
 
   -- LSP
   "neovim/nvim-lspconfig", -- enable LSP
-  "jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
+  {
+    "nvimtools/none-ls.nvim",  -- for formatters and linters, former null-ls
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
   "arkav/lualine-lsp-progress",
   "glepnir/lspsaga.nvim",
   "folke/trouble.nvim",
