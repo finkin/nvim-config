@@ -39,4 +39,4 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd [[colorscheme dracula ]]
+vim.cmd [[colorscheme catppuccin-mocha ]]
