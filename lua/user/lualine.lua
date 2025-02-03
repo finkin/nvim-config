@@ -67,7 +67,7 @@ lualine.setup({
 		lualine_a = { "mode" },
 		lualine_b = { { "branch", icon = "" }, { "diff", colored = false } },
 		lualine_c = { diagnostics },
-		lualine_x = { "searchcount", "filetype", lsp },
+		lualine_x = { "searchcount", "filetype", lsp, "copilot" },
 		lualine_y = { "encoding", "fileformat", mixed_spaces, "filesize" },
 		lualine_z = { "%p%%/%L" },
 	}
