@@ -66,6 +66,8 @@ map("n", "<leader>ra", ":lua vim.lsp.buf.code_action()<cr>", "Code Action")
 map("n", "<leader>rf", ":lua vim.lsp.buf.format{async=true}<cr>", "Format")
 map("n", "<leader>rl", ":lua vim.lsp.codelens.run()<cr>", "CodeLens Action")
 map("n", "<leader>rr", ":lua vim.lsp.buf.rename()<cr>", "Rename")
+-- AI
+map("n", "<leader>a", ":CodeCompanionChat<CR>", "AI Chat")
 
 map("n", "<leader>w", ":w!<CR>", "Save")
 map("n", "<leader>q", ":q!<CR>", "Quit")
