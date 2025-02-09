@@ -80,9 +80,6 @@ require("lazy").setup({
   },
   'AndreM222/copilot-lualine',
 
-  -- DAP
-  "mfussenegger/nvim-dap",
-
   -- Command line
   {
     "folke/noice.nvim",
