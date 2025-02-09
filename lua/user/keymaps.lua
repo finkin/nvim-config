@@ -14,6 +14,8 @@ map("n", "<C-h>", "<C-w>h", "Move to split in the left")
 map("n", "<C-j>", "<C-w>j", "Move to split below")
 map("n", "<C-k>", "<C-w>k", "Move to split above")
 map("n", "<C-l>", "<C-w>l", "Move to split in the right")
+map("n", "<C-S-j>", ":split<CR>", "Create horizontal split")
+map("n", "<C-S-l>", ":vsplit<CR>", "Create vertical split")
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "Move to next buffer")
 map("n", "<S-h>", ":bprevious<CR>", "Move to previous buffer")
