@@ -83,6 +83,13 @@ require("lazy").setup({
   },
   'AndreM222/copilot-lualine',
 
+  {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
   -- Command line
   {
     "folke/noice.nvim",
