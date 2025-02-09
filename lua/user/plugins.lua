@@ -55,7 +55,10 @@ require("lazy").setup({
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
 
-  "L3MON4D3/LuaSnip", -- snippet engine
+  {
+    "L3MON4D3/LuaSnip", -- snippet engine
+    build = "make install_jsregexp"
+  },
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets", -- a bunch of snippets
 
