@@ -42,6 +42,7 @@ lspconfig.yamlls.setup({
     },
   },
 })
+lspconfig.zls.setup({})
 
 local opts = {
   on_attach = require("user.lsp.handlers").on_attach,
