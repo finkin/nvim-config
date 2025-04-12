@@ -72,17 +72,7 @@ require("lazy").setup({
   "glepnir/lspsaga.nvim",
   "folke/trouble.nvim",
 
-  -- COPILOT
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end
-  },
-  'AndreM222/copilot-lualine',
-
+  -- AI
   {
     "olimorris/codecompanion.nvim",
     dependencies = {
