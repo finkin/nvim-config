@@ -32,8 +32,14 @@ require("lazy").setup({
       --[[ {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information ]]
     }
   },
-
-  "akinsho/bufferline.nvim", -- Buffers as tabs
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        offsets = { { filetype = "neo-tree", text = "", padding = 1 } }
+      }
+    }
+  },
   "moll/vim-bbye", -- Close buffers elegantly
   "nvim-lualine/lualine.nvim",
   "tpope/vim-surround",
