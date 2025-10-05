@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 neotree.setup({
+  log_level = "warn",
   window = {
     mappings = {
       ["h"] = "close_node", --use vim motions to
