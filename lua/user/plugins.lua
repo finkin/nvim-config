@@ -16,6 +16,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Themes
+  { "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  },
+  { "catppuccin/nvim", as = "catppuccin", lazy = true },
 
   "nvim-lua/popup.nvim", -- Implementation of the Popup API from vim
   "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
@@ -44,10 +53,6 @@ require("lazy").setup({
   "nvim-lualine/lualine.nvim",
   "tpope/vim-surround",
 
-  -- Themes
-  { "dracula/vim", as = "dracula" },
-  { "catppuccin/nvim", as = "catppuccin" },
-  "folke/tokyonight.nvim",
 
   -- Completion
   "hrsh7th/nvim-cmp", -- Completion plugin
@@ -93,7 +98,7 @@ require("lazy").setup({
       },
       -- comment the following line to ensure hub will be ready at the earliest
       cmd = "MCPHub",  -- lazy load by default
-      build = "npm install -g mcp-hub@latest",  -- Installs required mcp-hub npm module
+      build = "npm install -g mcp-hub@latest",  -- Installs required mcp-hub npm modulemapl
       -- uncomment this if you don't want mcp-hub to be available globally or can't use -g
       -- build = "bundled_build.lua",  -- Use this and set use_bundled_binary = true in opts  (see Advanced configuration)
       config = function()
@@ -125,9 +130,6 @@ require("lazy").setup({
   -- Git
   "lewis6991/gitsigns.nvim",
 
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-  }
+  { "folke/which-key.nvim", lazy = true }
   -- use "dstein64/vim-startuptime"
 })
