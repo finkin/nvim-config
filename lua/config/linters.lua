@@ -1,6 +1,5 @@
 local lint = require("lint")
 
-
 lint.linters_by_ft = {
   javascript = { "eslint_d" },
   typescript = { "eslint_d" },
@@ -9,6 +8,7 @@ lint.linters_by_ft = {
   python = { "pylint" },
   markdown = { 'vale' },
   dockerfile = { 'hadolint' },
+  groovy = { 'npm-groovy-lint' },  -- For Jenkinsfile
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
