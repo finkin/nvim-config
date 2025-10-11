@@ -19,7 +19,7 @@ map("n", "<C-S-l>", ":vsplit<CR>", "Create vertical split")
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "Move to next buffer")
 map("n", "<S-h>", ":bprevious<CR>", "Move to previous buffer")
-map("n", "<leader>c", ":bdelete!<CR>", "Close Buffer")
+map("n", "<leader>c", ":Bdelete!<CR>", "Close Buffer")
 -- Tree
 map("n", "<D-s>", ":Neotree toggle<cr>", "Toggle Tree")
 
