@@ -42,7 +42,7 @@ lspconfig.yamlls.setup({
         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
         ["https://json.schemastore.org/travis.json"] = ".travis.yml",
       },
-    },
+    }
   },
 })
 lspconfig.zls.setup({})
@@ -57,5 +57,4 @@ opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
 lspconfig.jsonls.setup(opts)
 
 require("user.lsp.handlers").setup()
-require("user.lsp.none-ls")
 require("user.lsp.lspsaga")

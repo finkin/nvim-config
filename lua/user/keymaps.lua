@@ -1,5 +1,5 @@
 local function map(mode, keys, command, description)
-  vim.keymap.set(mode, keys, command, { silent = true, desc = description })
+	vim.keymap.set(mode, keys, command, { silent = true, desc = description })
 end
 
 -- Remap space as leader key
@@ -19,20 +19,30 @@ map("n", "<C-S-l>", ":vsplit<CR>", "Create vertical split")
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "Move to next buffer")
 map("n", "<S-h>", ":bprevious<CR>", "Move to previous buffer")
-map("n", "<leader>c", ":Bdelete!<CR>", "Close Buffer")
+map("n", "<leader>c", ":bdelete!<CR>", "Close Buffer")
 -- Tree
-map("n", "<D-s>", ":Neotree toggle<cr>","Toggle Tree")
+map("n", "<D-s>", ":Neotree toggle<cr>", "Toggle Tree")
 
 -- Search
 map("n", "<leader>h", ":nohlsearch<CR>", "Clear search highlights")
-map("n", "<leader>f", ":lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files")
+map(
+	"n",
+	"<leader>f",
+	":lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	"Find files"
+)
 map("n", "<leader>F", ":lua require('telescope.builtin').live_grep({disable_coordinates = true})<cr>", "Find in files")
-map("n", "<leader>b", ":lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers")
+map(
+	"n",
+	"<leader>b",
+	":lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	"Buffers"
+)
 map("n", "<leader>R", ":Telescope oldfiles<cr>", "Open Recent File")
 -- Indent
 -- < and > normally change indentation but deselect text;
 -- this remaps them to keep the selection after indenting.
-map("v", ">", ">gv","")
+map("v", ">", ">gv", "")
 map("v", "<", "<gv", "")
 
 -- Move text up and down

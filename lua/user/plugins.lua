@@ -49,10 +49,8 @@ require("lazy").setup({
       }
     }
   },
-  "moll/vim-bbye", -- Close buffers elegantly
   "nvim-lualine/lualine.nvim",
   "tpope/vim-surround",
-
 
   -- Completion
   "hrsh7th/nvim-cmp", -- Completion plugin
@@ -75,13 +73,15 @@ require("lazy").setup({
 
   -- LSP
   "neovim/nvim-lspconfig", -- enable LSP
-  {
-    "nvimtools/none-ls.nvim",  -- for formatters and linters, former null-ls
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
   "arkav/lualine-lsp-progress",
   "glepnir/lspsaga.nvim",
   "folke/trouble.nvim",
+
+  -- Formatter
+  {'stevearc/conform.nvim'},
+
+  -- Linters without LSP
+  "mfussenegger/nvim-lint",
 
   -- AI
   {
