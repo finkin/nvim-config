@@ -32,6 +32,8 @@ require("lazy").setup({
 	"windwp/nvim-autopairs", -- Autopair, integrates with cmp ans treesitter
 	"numToStr/Comment.nvim", -- Easyliy comment stuff
 
+	{ "folke/snacks.nvim" },
+
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -78,7 +80,9 @@ require("lazy").setup({
 	"arkav/lualine-lsp-progress",
 	"glepnir/lspsaga.nvim",
 	"folke/trouble.nvim",
-
+	{
+		"b0o/schemastore.nvim",
+	},
 	-- Formatter
 	{ "stevearc/conform.nvim" },
 

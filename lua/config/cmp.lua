@@ -105,9 +105,6 @@ cmp.setup {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
-        per_filetype = {
-          codecompanion = { "codecompanion" },
-        }
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
@@ -123,7 +120,6 @@ cmp.setup {
         native_menu = false,
     },
 }
-
 
 
 

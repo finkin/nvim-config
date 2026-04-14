@@ -1,14 +1,19 @@
 require("mason").setup()
 
-local lspconfig = require("lspconfig")
-lspconfig.bashls.setup({})
-lspconfig.clangd.setup({})
-lspconfig.dockerls.setup({})
-lspconfig.gopls.setup({
-	rootdir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+local lsp = require("config.lsp.handlers")
+
+lsp.setup()
+
+vim.lsp.config("*", {
+	capabilities = lsp.capabilities,
+	on_attach = lsp.on_attach,
 })
-lspconfig.html.setup({})
-lspconfig.lua_ls.setup({
+
+vim.lsp.config("gopls", {
+	root_markers = { "go.work", "go.mod", ".git" },
+})
+
+vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			runtime = {
@@ -27,15 +32,13 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
-lspconfig.marksman.setup({})
-lspconfig.omnisharp.setup({})
-lspconfig.ruff.setup({})
-lspconfig.terraformls.setup({
+
+vim.lsp.config("terraformls", {
 	cmd = { "terraform-ls", "serve" },
 	filetypes = { "tf", "terraform", "hcl" },
 })
-lspconfig.tflint.setup({})
-lspconfig.yamlls.setup({
+
+vim.lsp.config("yamlls", {
 	settings = {
 		yaml = {
 			schemas = {
@@ -45,16 +48,31 @@ lspconfig.yamlls.setup({
 		},
 	},
 })
-lspconfig.zls.setup({})
 
-local opts = {
-	on_attach = require("config.lsp.handlers").on_attach,
-	capabilities = require("config.lsp.handlers").capabilities,
-}
+vim.lsp.config("jsonls", {
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+			validate = { enable = true },
+		},
+	},
+})
 
-local jsonls_opts = require("config.lsp.settings.jsonls")
-opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-lspconfig.jsonls.setup(opts)
+vim.lsp.enable({
+	"bashls",
+	"clangd",
+	"dockerls",
+	"gopls",
+	"html",
+	"lua_ls",
+	"marksman",
+	"omnisharp",
+	"ruff",
+	"terraformls",
+	"tflint",
+	"yamlls",
+	"zls",
+	"jsonls",
+})
 
-require("config.lsp.handlers").setup()
 require("config.lsp.lspsaga")
