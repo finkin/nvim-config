@@ -8,6 +8,7 @@ local ensure_installed = {
   "markdown_inline",
   "bash",
   "python",
+  "regex",
   "go",
   "hcl",
   "terraform",
