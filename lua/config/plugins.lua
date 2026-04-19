@@ -32,7 +32,33 @@ require("lazy").setup({
 	"windwp/nvim-autopairs", -- Autopair, integrates with cmp ans treesitter
 	"numToStr/Comment.nvim", -- Easyliy comment stuff
 
-	{ "folke/snacks.nvim" },
+	{
+		"folke/snacks.nvim",
+		opts = {
+			image = {
+				formats = {
+					"png",
+					"jpg",
+					"jpeg",
+					"gif",
+					"bmp",
+					"webp",
+					"tiff",
+					"heic",
+					"avif",
+					"mp4",
+					"mov",
+					"avi",
+					"mkv",
+					"webm",
+					"pdf",
+					"icns",
+					"svg",
+					"svgz",
+				},
+			},
+		},
+	},
 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -106,9 +132,20 @@ require("lazy").setup({
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
 		build = ":TSUpdate",
 	},
-	"JoosepAlviste/nvim-ts-context-commentstring",
+	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		init = function()
+			vim.g.skip_ts_context_commentstring_module = true
+		end,
+		config = function()
+			require("ts_context_commentstring").setup({
+				enable_autocmd = false,
+			})
+		end,
+	},
 	"fladson/vim-kitty",
 
 	-- Git

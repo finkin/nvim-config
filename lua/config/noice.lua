@@ -10,6 +10,10 @@ require("noice").setup({
 		bottom_search = false,
 		command_palette = false,
 	},
+	messages = {
+		view_error = "popup",
+		view_warn = "popup",
+	},
 	notify = {
 		view = "mini",
 	},

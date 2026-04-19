@@ -30,7 +30,7 @@ local options = {
   showmode = false,                   -- hide mode as lightline is already showing it
   --vim.opt.gitsigns = true,
   clipboard = "unnamedplus",          -- allowws neovim to access the system clipboard
-  cmdheight = 0,                      -- hide command line when it is not used 
+  cmdheight = 1,                      -- keep error messages visible
   showtabline = 4,                    -- always show tabs
   wrap = false,                       -- don't wrap long lines
 }
