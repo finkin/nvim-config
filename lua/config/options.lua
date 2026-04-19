@@ -31,7 +31,7 @@ local options = {
   --vim.opt.gitsigns = true,
   clipboard = "unnamedplus",          -- allowws neovim to access the system clipboard
   cmdheight = 1,                      -- keep error messages visible
-  showtabline = 4,                    -- always show tabs
+  showtabline = 2,                    -- always show tabs
   wrap = false,                       -- don't wrap long lines
 }
 
