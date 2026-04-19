@@ -11,6 +11,7 @@ local ensure_installed = {
   "go",
   "hcl",
   "terraform",
+  "vim",
 }
 
 local installed = treesitter.get_installed()
