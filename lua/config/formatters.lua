@@ -1,11 +1,11 @@
 require("conform").setup({
   format_on_save = function(bufnr)
-      -- Disable with a global or buffer-local variable
-      if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-        return
-      end
-      return { lsp_format = "fallback" }
-    end,
+    -- Disable with a global or buffer-local variable
+    if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+      return
+    end
+    return { lsp_format = "fallback" }
+  end,
   formatters_by_ft = {
     -- Single brackets will run all formatters
     -- Double only the first that is available on the system
@@ -13,7 +13,7 @@ require("conform").setup({
     lua = { "stylua" },
     hcl = { "packer_fmt" },
     python = { "isort", "black" },
-    terraform = { "terraform_fmt" }
+    terraform = { "terraform_fmt" },
   },
 })
 

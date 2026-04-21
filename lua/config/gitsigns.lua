@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-gitsigns.setup {
+gitsigns.setup({
   signs = {
     add = { text = "+" },
     change = { text = "~" },
@@ -13,4 +13,4 @@ gitsigns.setup {
   },
   signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
   attach_to_untracked = true,
-}
+})

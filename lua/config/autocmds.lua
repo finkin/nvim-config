@@ -1,5 +1,5 @@
-vim.api.nvim_create_autocmd('TextChanged', {
-  pattern = '*',
+vim.api.nvim_create_autocmd("TextChanged", {
+  pattern = "*",
   callback = function()
     local qf_list = vim.fn.getqflist()
     local current_buf = vim.api.nvim_get_current_buf()
@@ -23,5 +23,5 @@ vim.api.nvim_create_autocmd('TextChanged', {
     if #new_list ~= #qf_list then
       vim.fn.setqflist({}, "r", { items = new_list })
     end
-  end
+  end,
 })

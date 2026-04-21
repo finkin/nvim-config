@@ -3,19 +3,18 @@ if not status_ok then
   return
 end
 
+local actions = require("telescope.actions")
 
-local actions = require "telescope.actions"
-
-telescope.setup {
+telescope.setup({
   defaults = {
     vimgrep_arguments = {
-        "rg",
-        "--color=never",
-        "--no-heading",
-        "--with-filename",
-        "--line-number",
-        "--column",
-        "--smart-case",
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
     },
     prompt_prefix = "   ",
     selection_caret = "  ",
@@ -103,24 +102,22 @@ telescope.setup {
   },
   pickers = {
     live_grep = {
-      additional_args = function ()
-        return {"--hidden"}
-      end
-    }
+      additional_args = function()
+        return { "--hidden" }
+      end,
+    },
   },
   extensions = {
     media_files = {
-        filetypes = {"png", "webp", "jpg", "jpeg", "webm", "pdf"},
-        find_cmd = "rg" -- find command (defaults to `fd`)
-      },
+      filetypes = { "png", "webp", "jpg", "jpeg", "webm", "pdf" },
+      find_cmd = "rg", -- find command (defaults to `fd`)
+    },
     ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-      }
-    }
+      require("telescope.themes").get_dropdown({}),
+    },
   },
-}
+})
 
-
-telescope.load_extension('media_files')
-telescope.load_extension('project')
-telescope.load_extension('ui-select')
+telescope.load_extension("media_files")
+telescope.load_extension("project")
+telescope.load_extension("ui-select")
