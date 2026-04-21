@@ -32,6 +32,7 @@ local options = {
   clipboard = "unnamedplus", -- allowws neovim to access the system clipboard
   cmdheight = 1, -- keep error messages visible
   showtabline = 2, -- always show tabs
+  updatetime = 300, -- make CursorHold-based feedback responsive
   wrap = false, -- don't wrap long lines
 }
 

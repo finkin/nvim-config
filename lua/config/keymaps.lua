@@ -110,7 +110,7 @@ map("n", "<leader>gl", ":Telescope git_commits<cr>", "Git log")
 map("n", "<leader>gs", ":Telescope git_status<cr>", "Git status")
 -- LSP
 map("n", "<leader>lD", ":lua vim.lsp.buf.declaration()<CR>", "Go to declaration")
-map("n", "<leader>lI", ":LspInfo<cr>", "Info")
+map("n", "<leader>lI", ":checkhealth vim.lsp<cr>", "LSP health")
 map("n", "<leader>lK", ":lua vim.lsp.buf.signature_help()<CR>", "View signature")
 map("n", "<leader>lQ", ":Trouble diagnostics toggle<cr>", "Diagnostics")
 map("n", "<leader>lS", ":Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols")

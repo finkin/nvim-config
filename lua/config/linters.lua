@@ -4,7 +4,6 @@ lint.linters_by_ft = {
   javascript = { "eslint_d" },
   typescript = { "eslint_d" },
   yaml = { "yamllint" }, -- General YAML linting
-  json = { "cfn_lint" },
   python = { "ruff" },
   --[[ markdown = { 'vale' }, ]]
   dockerfile = { "hadolint" },
