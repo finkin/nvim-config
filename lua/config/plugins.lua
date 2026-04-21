@@ -27,7 +27,6 @@ require("lazy").setup({
   },
   { "catppuccin/nvim", as = "catppuccin", lazy = true },
 
-  "nvim-lua/popup.nvim", -- Implementation of the Popup API from vim
   "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
   "windwp/nvim-autopairs", -- Autopair, integrates with cmp ans treesitter
   "numToStr/Comment.nvim", -- Easyliy comment stuff
@@ -89,7 +88,6 @@ require("lazy").setup({
   "hrsh7th/cmp-cmdline", -- cmdline completion
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-nvim-lua",
-  "hrsh7th/cmp-nvim-lsp-signature-help",
 
   "williamboman/mason.nvim",
 
@@ -102,8 +100,13 @@ require("lazy").setup({
 
   -- LSP
   "neovim/nvim-lspconfig", -- enable LSP
-  "arkav/lualine-lsp-progress",
-  "folke/trouble.nvim",
+  {
+    "folke/trouble.nvim",
+    cmd = "Trouble",
+    config = function()
+      require("config.trouble")
+    end,
+  },
   {
     "b0o/schemastore.nvim",
   },
@@ -116,16 +119,29 @@ require("lazy").setup({
   -- Command line
   {
     "folke/noice.nvim",
+    event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
     },
+    config = function()
+      require("config.noice")
+    end,
   },
 
   -- Telescope
-  "nvim-telescope/telescope.nvim",
-  "nvim-telescope/telescope-media-files.nvim",
-  "nvim-telescope/telescope-project.nvim",
-  "nvim-telescope/telescope-ui-select.nvim",
+  {
+    "nvim-telescope/telescope.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-telescope/telescope-media-files.nvim",
+      "nvim-telescope/telescope-project.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
+    },
+    config = function()
+      require("config.telescope")
+    end,
+  },
 
   -- Treesitter
   {
@@ -149,6 +165,5 @@ require("lazy").setup({
   -- Git
   "lewis6991/gitsigns.nvim",
 
-  { "folke/which-key.nvim", lazy = true },
   -- use "dstein64/vim-startuptime"
 })

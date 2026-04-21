@@ -12,7 +12,7 @@ require("noice").setup({
   },
   messages = {
     view_error = "popup",
-    view_warn = "popup",
+    view_warn = "notify",
   },
   notify = {
     view = "mini",
