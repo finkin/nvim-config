@@ -19,13 +19,19 @@ require("lazy").setup({
   -- Themes
   {
     "folke/tokyonight.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  { "catppuccin/nvim", as = "catppuccin", lazy = true },
+  {
+    "kepano/flexoki-neovim",
+    name = "flexoki",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme tokyonight]])
+      vim.cmd([[colorscheme flexoki-light]])
     end,
   },
-  { "catppuccin/nvim", as = "catppuccin", lazy = true },
 
   "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
   "windwp/nvim-autopairs", -- Autopair, integrates with cmp ans treesitter
