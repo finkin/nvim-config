@@ -44,3 +44,12 @@ lualine.setup({
     lualine_z = { "%p%%/%L" },
   },
 })
+
+vim.api.nvim_create_autocmd({ "LspAttach", "LspDetach" }, {
+  group = vim.api.nvim_create_augroup("lualine_lsp_refresh", { clear = true }),
+  callback = function()
+    vim.schedule(function()
+      lualine.refresh({ place = { "statusline" }, force = true })
+    end)
+  end,
+})
