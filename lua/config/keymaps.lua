@@ -116,7 +116,14 @@ map("n", "<leader>lQ", ":Trouble diagnostics toggle<cr>", "Diagnostics")
 map("n", "<leader>lS", ":Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols")
 map("n", "<leader>ld", ":lua vim.lsp.buf.definition()<CR>", "Go to defintion")
 map("n", "<leader>li", ":lua vim.lsp.buf.implementation()<CR>", "Go to implementation")
-map("n", "<leader>lj", ":lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic")
+map("n", "<leader>lj", function()
+  vim.diagnostic.jump({
+    count = -1,
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false })
+    end,
+  })
+end, "Prev Diagnostic")
 map("n", "<leader>lk", ":lua vim.lsp.buf.hover()<CR>", "Hover info")
 map("n", "<leader>lc", incoming_calls, "Incoming calls")
 map("n", "<leader>lq", ":Trouble diagnostics toggle filter.buf=0<cr>", "Diagnostics (Buffer)")

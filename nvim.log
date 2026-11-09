@@ -3,3 +3,5 @@ WRN 2026-09-20T00:21:24.924 ?.8415     server_start:197: Failed to start server:
 WRN 2026-09-20T00:21:29.463 ?.8426     server_start:197: Failed to start server: operation not permitted: /var/folders/lb/wy_9g2h16m1490p4g2vsf8jh0000gq/T/nvim.javier.alonso/ygsW4C/nvim.8426.0
 WRN 2026-09-20T00:21:29.491 ?.8429     server_start:197: Failed to start server: operation not permitted: /var/folders/lb/wy_9g2h16m1490p4g2vsf8jh0000gq/T/nvim.javier.alonso/YFMX2x/nvim.8429.0
 WRN 2026-09-20T00:31:39.150 ?.13756    server_start:197: Failed to start server: operation not permitted: /var/folders/lb/wy_9g2h16m1490p4g2vsf8jh0000gq/T/nvim.javier.alonso/U1oADQ/nvim.13756.0
+WRN 2026-11-09T13:20:08.824 ?.71382    server_start:197: Failed to start server: operation not permitted: /var/folders/lb/wy_9g2h16m1490p4g2vsf8jh0000gq/T/nvim.javier.alonso/U9kR4M/nvim.71382.0
+WRN 2026-11-09T18:36:43.503 ?.86742    server_start:197: Failed to start server: operation not permitted: /var/folders/lb/wy_9g2h16m1490p4g2vsf8jh0000gq/T/nvim.javier.alonso/bTPhNW/nvim.86742.0

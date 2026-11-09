@@ -1,15 +1,8 @@
-require("config.keymaps")
-require("config.plugins")
-require("config.mason")
+if vim.loader then
+  vim.loader.enable()
+end
+
 require("config.options")
-require("config.cmp")
-require("config.lsp")
-require("config.formatters")
-require("config.linters")
-require("config.treesitter")
-require("config.autopairs")
-require("config.comment")
-require("config.gitsigns")
-require("config.neo-tree")
-require("config.lualine")
+require("config.keymaps")
 require("config.autocmds")
+require("plugins")
