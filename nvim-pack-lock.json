@@ -102,7 +102,7 @@
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim.git"
     },
-    "elescope-media-files.nvim": {
+    "telescope-media-files.nvim": {
       "rev": "0826c7a730bc4d36068f7c85cf4c5b3fd9fb570a",
       "src": "https://github.com/nvim-telescope/telescope-media-files.nvim.git"
     },
